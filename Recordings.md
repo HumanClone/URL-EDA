@@ -62,3 +62,50 @@ CNN:accuracy: 0.8780 - loss: 0.3046 - precision: 0.8469 - recall: 0.9421 - val_a
 
 SVM and SGD 75
 
+
+# Reformating data to have a binary for subdomain, going to compare, this with Vectorising
+## Scaling and no regularization 
+### Results
+                precision    recall  f1-score
+RF:        0       0.95      0.94      0.95     
+           1       0.95      0.96      0.95
+accuracy 0.95
+
+SVC        0       0.79      0.63      0.70     
+           1       0.73      0.85      0.78
+accuracy 0.75
+
+SDG        0       0.82      0.58      0.68     
+           1       0.71      0.89      0.79
+accuracy 0.74
+
+LSTM:accuracy: 0.8811 - loss: 0.2928 - precision: 0.8480 - recall: 0.9476 - val_accuracy: 0.8812 - val_loss: 0.2942 - val_precision: 0.8471 - val_recall: 0.9492 |Epoch 19
+
+CNN: accuracy: 0.8772 - loss: 0.3027 - precision: 0.8459 - recall: 0.9418 - val_accuracy: 0.8795 - val_loss: 0.2978 - val_precision: 0.8444 - val_recall: 0.9496| Epoch 13
+
+
+
+## tdif vectorization 
+
+dimensions (n,14,19)
+
+
+### Results
+                precision    recall  f1-score
+RF:        0       0.96      0.90      0.93     
+           1       0.91      0.97      0.94
+accuracy 0.93
+
+SVC        0       0.84      0.78      0.81     
+           1       0.82      0.87      0.85 
+accuracy 0.83
+
+SDG        0       0.85      0.78      0.81     
+           1       0.82      0.88      0.85
+accuracy 0.83
+
+LSTM: accuracy: 0.9337 - loss: 0.1672 - precision: 0.9248 - recall: 0.9534 - val_accuracy: 0.9317 - val_loss: 0.1720 - val_precision: 0.9195 - val_recall: 0.9559| Epoch 8
+
+CNN:accuracy: 0.9307 - loss: 0.1787 - precision: 0.9213 - recall: 0.9517 - val_accuracy: 0.9316 - val_loss: 0.1754 - val_precision: 0.9206 - val_recall: 0.9543| epoch 30
+accuracy: 0.9366 - loss: 0.1595 - precision: 0.9276 - recall: 0.9561 - val_accuracy: 0.9349 - val_loss: 0.1645 - val_precision: 0.9256 - val_recall: 0.9550 |Epoch 29
+
